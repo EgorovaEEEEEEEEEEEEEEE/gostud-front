@@ -1,0 +1,26 @@
+.user-container {
+    min-height: 100%;
+    width: 60%;
+}
+
+.user-card {
+    margin: 100px 20px 100px 20px;
+}
+
+.clubs-cards {
+    margin: 20px 20px 20px 20px;
+}
+
+.club-card {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.club-card:hover {
+    cursor: pointer;
+    background-color: var(--main-color-5);
+}
+
+mat-card {
+    background-color: var(--main-color-4);
+}

@@ -1,0 +1,15 @@
+<div class="chats">
+	<mat-card *ngFor="let chat of chats" class="club-chat" routerLink="../../../chat/{{chat.id}}">
+	
+		<mat-card-header>
+			<mat-card-title>{{chat.name}}</mat-card-title>
+		</mat-card-header>
+	
+		<mat-card-content>
+			{{chat.lastMessage.sender!.username}}: {{chat.lastMessage.content}}
+		</mat-card-content>
+	
+	</mat-card>
+
+	<button mat-stroked-button>Новый чат</button>
+</div>

@@ -1,0 +1,14 @@
+.club-member {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.club-member:hover {
+    cursor: pointer;
+    background-color: var(--main-color-5);
+}
+
+mat-card {
+    margin-left: 20px;
+    background-color: var(--main-color-4);
+}

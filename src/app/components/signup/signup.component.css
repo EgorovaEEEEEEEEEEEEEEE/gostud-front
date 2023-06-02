@@ -1,0 +1,14 @@
+:host {
+    --signup-width: 20%;
+}
+
+.signup {
+    margin-top: 200px;
+    text-align: center;
+    width: var(--signup-width);
+    padding-left: calc(50% - var(--signup-width) / 2);
+}
+
+mat-form-field {
+    width: 100%;
+}

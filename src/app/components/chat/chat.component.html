@@ -1,0 +1,50 @@
+<div class="container">
+	<mat-card class="chat-header">
+
+		<mat-card-header>
+			<mat-card-title>{{chat.name}}</mat-card-title>
+		</mat-card-header>
+
+		<mat-card-content>
+			<a [routerLink]="'../../user/' + chat.admin.username">Администратор</a>
+		</mat-card-content>
+
+	</mat-card>
+
+	<div class="chat-messages">
+			<div *ngFor="let message of chat.messages">
+				<mat-card *ngIf="message.sender.username != curUser.username" class="chat-message">
+		
+					<mat-card-header>
+						<mat-card-title>
+							<a [routerLink]="'../../user/' + message.sender.username">{{message.sender.username}}</a>
+						</mat-card-title>
+						<mat-card-subtitle>{{message.sentAt.toLocaleString()}}</mat-card-subtitle>
+					</mat-card-header>
+		
+					<mat-card-content>{{message.content}}</mat-card-content>
+		
+				</mat-card>
+
+				<mat-card *ngIf="message.sender.username == curUser.username" class="user-chat-message">
+		
+					<mat-card-header>
+						<mat-card-title>
+							<a [routerLink]="'../../user/' + message.sender.username">{{message.sender.username}}</a>
+						</mat-card-title>
+						<mat-card-subtitle>{{message.sentAt.toLocaleString()}}</mat-card-subtitle>
+					</mat-card-header>
+		
+					<mat-card-content>{{message.content}}</mat-card-content>
+		
+				</mat-card>
+			</div>
+	</div>
+
+	<mat-form-field class="chat-input">
+		<input matInput>
+		<button matSuffix mat-icon-button>
+			<mat-icon>send</mat-icon>
+		</button>
+	</mat-form-field>
+</div>

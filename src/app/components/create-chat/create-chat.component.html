@@ -1,0 +1,17 @@
+<div class="create-chat">
+	<form [formGroup]="createChatForm" (ngSubmit)="onCreateClick()">
+		<!-- Поле ввода Email -->
+		<div class="form-group">
+			<mat-form-field>
+				<mat-label>Имя чата</mat-label>
+				<input matInput formControlName="name" type="text" name="name" [(ngModel)]="chat.name"/>
+				<mat-error *ngIf="!createChatForm.valid">Нужно уникальное строковое название</mat-error>
+			</mat-form-field>
+		</div>
+
+		<!-- Кнопка входа -->
+		<div class="form-group">
+			<button mat-raised-button type="submit" class="login-button">Создать</button>
+		</div>
+	</form>
+</div>

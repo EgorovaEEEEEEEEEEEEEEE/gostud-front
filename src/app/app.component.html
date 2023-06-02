@@ -1,0 +1,38 @@
+<div class="app-container">
+	<div class="menu-container">
+		<div class="title">
+			GoSTUD
+		</div>
+
+        <ul *ngIf="loggedIn" class="menu-controls">
+            <li class="control">
+                <a routerLink="">Моя страница</a>
+            </li>
+            <li class="control">
+                <a routerLink="clubs">Клубы</a>
+            </li>
+            <li class="control">
+                <a routerLink="messages">Сообщения</a>
+            </li>
+            <li class="control">
+                <a routerLink="settings">Настройки</a>
+            </li>
+			<li class="control">
+				<a (click)="onLogoutClick()">Выход</a>
+			</li>
+        </ul>
+		
+		<ul *ngIf="!loggedIn" class="menu-controls">
+			<li class="control">
+				<a routerLink="login">Вход</a>
+			</li>
+			<li class="control">
+				<a routerLink="signup">Регистрация</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="content-container">
+		<router-outlet></router-outlet>
+	</div>
+</div>

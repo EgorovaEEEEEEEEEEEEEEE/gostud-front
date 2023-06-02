@@ -1,0 +1,9 @@
+<mat-card *ngFor="let post of posts" class="club-post">
+
+	<mat-card-header>
+		<mat-card-subtitle>{{post.createdAt.toLocaleString()}}</mat-card-subtitle>
+	</mat-card-header>
+
+	<mat-card-content>{{post.content}}</mat-card-content>
+
+</mat-card>

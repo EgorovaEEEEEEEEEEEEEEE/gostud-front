@@ -1,0 +1,30 @@
+<div class="club-container">
+
+    <mat-card class="club-card">
+
+        <mat-card-header>
+
+            <mat-card-title-group>
+                <mat-card-title>{{club.name}}</mat-card-title>
+            </mat-card-title-group>
+
+        </mat-card-header>
+
+        <mat-card-content>
+            {{club.description}}
+        </mat-card-content>
+
+    </mat-card>
+
+    <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+
+    <nav mat-tab-nav-bar [tabPanel]="tabPanel" class="club-tabs">
+        <a mat-tab-link routerLink="posts" (click)="activeLink = 'posts'" [active]="activeLink == 'posts'">Записи</a>
+        <a mat-tab-link routerLink="chats" (click)="activeLink = 'chats'" [active]="activeLink == 'chats'">Чаты</a>
+        <a mat-tab-link routerLink="members" (click)="activeLink = 'members'" [active]="activeLink == 'members'">Участники</a>
+
+    </nav>
+    
+    <router-outlet></router-outlet>
+
+</div>

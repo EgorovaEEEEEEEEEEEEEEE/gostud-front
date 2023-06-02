@@ -1,0 +1,35 @@
+<div class="create-club">
+	<form [formGroup]="createClubForm" (ngSubmit)="onCreateClick()">
+		<!-- Поле ввода Email -->
+		<div class="form-group">
+			<mat-form-field>
+				<mat-label>Уникальная строка</mat-label>
+				<input matInput formControlName="handle" type="text" name="handle" [(ngModel)]="club.handle"/>
+				<mat-error *ngIf="!createClubForm.valid">Нужно уникальное строковое название</mat-error>
+			</mat-form-field>
+		</div>
+	
+		<!-- Поле ввода пароля -->
+		<div class="form-group">
+			<mat-form-field>
+				<mat-label>Имя</mat-label>
+				<input matInput formControlName="name" type="text" name="name" [(ngModel)]="club.name"/>
+				<mat-error *ngIf="!createClubForm.valid">Нужно имя</mat-error>
+			</mat-form-field>
+		</div>
+	
+		<!-- Поле ввода пароля -->
+		<div class="form-group">
+			<mat-form-field>
+				<mat-label>Описание</mat-label>
+				<textarea matInput formControlName="description" type="text" name="description" [(ngModel)]="club.description"></textarea>
+				<mat-error *ngIf="!createClubForm.valid">Нужно описание</mat-error>
+			</mat-form-field>
+		</div>
+	
+		<!-- Кнопка входа -->
+		<div class="form-group">
+			<button mat-raised-button type="submit" class="login-button">Создать</button>
+		</div>
+	</form>
+</div>

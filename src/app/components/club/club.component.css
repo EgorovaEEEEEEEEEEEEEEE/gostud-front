@@ -1,0 +1,16 @@
+.club-container {
+    min-height: 100%;
+    width: 60%;
+}
+
+.club-card {
+    margin: 100px 20px 100px 20px;
+}
+
+mat-card {
+    background-color: var(--main-color-4);
+}
+
+.club-tabs {
+    margin-left: 20px;
+}

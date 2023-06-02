@@ -1,0 +1,8 @@
+.create-chat {
+	margin-top: 200px;
+	margin-left: 20px;
+}
+
+.create-chat mat-form-field{
+	width: 300px;
+}

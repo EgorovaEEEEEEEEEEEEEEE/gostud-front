@@ -1,0 +1,69 @@
+<div class="signup">
+    <form [formGroup]="signupForm" (ngSubmit)="onSignUpClick()">
+        <!-- Поле ввода пользовательского имени -->
+        <div class="form-group">
+            <mat-form-field>
+                <mat-label>Пользовательское имя</mat-label>
+                <input matInput formControlName="username" name="username" type="text" [(ngModel)]="signup.username"/>
+            </mat-form-field>
+        </div>
+
+        <!-- Поле ввода имени -->
+        <div class="form-group">
+            <mat-form-field>
+                <mat-label>Имя</mat-label>
+                <input matInput formControlName="firstName" name="firstName" type="text" [(ngModel)]="signup.firstName"/>
+            </mat-form-field>    
+        </div>    
+
+        <!-- Поле ввода фамилии -->
+        <div class="form-group">
+            <mat-form-field>
+                <mat-label>Фамилия</mat-label>
+                <input matInput formControlName="lastName" name="lastName" type="text" [(ngModel)]="signup.lastName"/>
+            </mat-form-field>    
+        </div>    
+
+        <!-- Поле ввода университета -->
+        <div class="form-group">
+            <mat-form-field>
+                <mat-label>Название университета</mat-label>
+                <input matInput formControlName="uniName" name="uniName" type="text" [(ngModel)]="signup.uniName"/>
+            </mat-form-field>
+        </div>
+
+        <!-- Поле ввода Email -->
+        <div class="form-group">
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" name="email" type="email" [(ngModel)]="signup.email"/>
+            </mat-form-field>
+        </div>
+
+        <!-- Поле ввода пароля -->
+        <div class="form-group">
+            <mat-form-field>
+                <mat-label>Пароль</mat-label>
+                <input matInput formControlName="password" name="password" type="password" [(ngModel)]="signup.password"/>
+            </mat-form-field>
+        </div>
+
+        <!-- Поле ввода подтверждения пароля -->
+        <div class="form-group">
+            <mat-form-field>
+                <mat-label>Подтвердите пароль</mat-label>
+                <input matInput formControlName="confirmPassword" name="confirmPassword" type="password" [(ngModel)]="confirmPassword"/>
+            </mat-form-field>
+        </div>
+
+        <!-- Поле для кнопки входа -->
+        <div class="form-group">
+            <button mat-button [disabled]="!signupForm.valid" type="submit">Зарегистрироваться</button>
+        </div>
+    </form>
+    
+    <!-- Поле для кнопки регистрации -->
+    <div>
+        <button mat-button (click) = "onSignInClick()">Вход</button>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="login">
+    <form [formGroup]="loginForm" (ngSubmit)="onLogInClick()">
+        <!-- Поле ввода Email -->
+        <div class="form-group">
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" type="email" name="email" [(ngModel)]="login.email"/>
+                <mat-error *ngIf="!loginForm.valid">Нужна электронная почта</mat-error>
+            </mat-form-field>
+        </div>
+
+        <!-- Поле ввода пароля -->
+        <div class="form-group">
+            <mat-form-field>
+                <mat-label>Пароль</mat-label>
+                <input matInput formControlName="password" type="password" name="password" [(ngModel)]="login.password"/>
+                <mat-error *ngIf="!loginForm.valid">Нужен пароль</mat-error>
+            </mat-form-field>
+        </div>
+
+        <!-- Кнопка входа -->
+        <div class="form-group">
+            <button mat-raised-button type="submit" class="login-button">Войти</button>
+        </div>
+    </form>
+    
+    <!-- Кнопка регистрации -->
+    <div>
+        <button mat-raised-button (click)="onSignUpClick()" class="login-button">Регистрация</button>
+    </div>
+</div>

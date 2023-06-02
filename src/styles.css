@@ -1,0 +1,27 @@
+:root {
+	--main-color-1: #241411;
+	--main-color-2: #f8ecbc;
+	--main-color-3: #3b3b3b;
+	--main-color-4: #c6967984;
+	--main-color-5: #b6a385;
+	/* --main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+	--main-font: courier, monospace;
+	--font-color-1: #e5cea2;
+	--font-color-2: #AD986E;
+	--font-color-3: #6e7bad;
+	--button-margin: 0px 0px 20px 0px;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0px;
+	background-color: var(--main-color);
+}
+
+* {
+	font-family: var(--main-font);
+}

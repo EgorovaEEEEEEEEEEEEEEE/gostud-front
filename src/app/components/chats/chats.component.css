@@ -1,0 +1,19 @@
+.chats {
+    margin-top: 200px;
+    margin-left: 20px;
+}
+
+.club-chat {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.club-chat:hover {
+    cursor: pointer;
+    background-color: var(--main-color-5);
+}
+
+mat-card {
+    margin-left: 20px;
+    background-color: var(--main-color-4);
+}

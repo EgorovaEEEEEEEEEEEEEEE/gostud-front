@@ -1,0 +1,40 @@
+<div class="user-container">
+
+    <mat-card class="user-card">
+
+        <mat-card-header>
+            <mat-card-title>{{user.username}}</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>полное имя: {{user.firstName}} {{user.lastName}}</mat-card-content>
+        <mat-card-content>университет: {{user.uniName}}</mat-card-content>
+
+    </mat-card>
+
+    <mat-tab-group class="clubs-cards" animationDuration="0ms">
+
+        <mat-tab label="Мои подписки:">
+
+            <mat-card *ngFor="let club of user.userClubs" class="club-card" (click)="onClubClick(club.handle)">
+                <mat-card-header>
+                    <mat-card-title>{{club.name}}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>Описание: {{club.description}}</mat-card-content>
+            </mat-card>
+
+        </mat-tab>
+
+        <mat-tab label="Администрирую:">
+
+            <mat-card *ngFor="let club of user.adminClubs" class="club-card" (click)="onClubClick(club.handle)">
+                <mat-card-header>
+                    <mat-card-title>{{club.name}}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>Описание: {{club.description}}</mat-card-content>
+            </mat-card>
+
+        </mat-tab>
+
+    </mat-tab-group>
+
+</div>
